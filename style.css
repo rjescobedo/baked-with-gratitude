@@ -72,6 +72,8 @@ html {
 
 /* Footer */
 .footer {
+    display: flex;
+    flex-direction: column;
     background-color: var(--clr-light-brown);
     color: var(--clr-dark);
     padding: 1rem;
@@ -79,18 +81,17 @@ html {
 }
 
 .footer-link-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    text-align: center;
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 .footer-link {
     font-weight: var(--fw-bold);
     color: var(--clr-dark-brown);
     text-decoration: none;
+    padding: .5em;
 }
 
 .footer-link:hover {
@@ -125,4 +126,23 @@ html {
     padding: 0;
     margin: 0;
     text-align: center;
+}
+
+@media screen and (min-width:600px){
+    .footer {
+        background-color: var(--clr-light-brown);
+        color: var(--clr-dark);
+        padding: 1rem;
+        font-size: var(--fs-h4);
+    }
+    
+    .footer-link-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
 }
