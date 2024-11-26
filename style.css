@@ -1,0 +1,128 @@
+/* Custom font type, colors, and sizes */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-primary: 'Lora', serif ;
+    --ff-secondary: 'Roboto Slab', serif;
+
+    --fw-reg: 400;
+    --fw-bold: 700;
+
+    --clr-light-beige: #FEFAE0;
+    --clr-green: #CCD5AE;
+    --clr-light-brown: #faedcd; 
+    --clr-dark-brown: #432818;
+    --clr-light: whitesmoke;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-h4: 1.15rem;
+    --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25), 0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header/Navigation */
+.navbar {
+    background-color: var(--clr-light-brown);
+}
+
+.offcanvas-text {
+    background-color: var(--clr-light-brown);
+    color: var(--clr-dark-brown);
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background: url('img/hero-section-img.webp') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.text-overlay {
+    color: white;
+    position: absolute;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+}
+  
+.text-overlay h1 {
+    font-size: 3rem;
+    margin: 0 0 1rem;
+}
+  
+.text-overlay p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--clr-light-brown);
+    color: var(--clr-dark);
+    padding: 1rem;
+    font-size: var(--fs-h4);
+}
+
+.footer-link-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-link {
+    font-weight: var(--fw-bold);
+    color: var(--clr-dark-brown);
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    opacity: .8;
+}
+
+.social-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.social-list-item {
+    padding: 1.5rem;
+}
+
+.social-list-icon {
+    color: var(--clr-dark-brown);
+    font-size: 2rem;
+}
+
+.social-list-icon:hover {
+    opacity: .8;
+}
+
+.footer-text {
+    color: var(--clr-dark-brown);
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
