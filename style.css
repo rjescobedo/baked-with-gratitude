@@ -14,6 +14,7 @@
 
     --clr-light-beige: #FEFAE0;
     --clr-green: #CCD5AE;
+    --clr-light-green: #eaeedc;
     --clr-green-hover: #888f71;
     --clr-light-brown: #faedcd; 
     --clr-dark-brown: #432818;
@@ -36,7 +37,11 @@ html {
 
 /* Header/Navigation */
 .navbar {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand:hover {
+    opacity: .8;
 }
 
 .navbar-text {
@@ -58,7 +63,7 @@ html {
     justify-content: center;
     align-items: center;
 }
-  
+
 .text-overlay {
     color: var(--clr-light);
     position: absolute;
@@ -166,3 +171,94 @@ html {
         margin: 0;
     } 
 }
+
+/* About Section */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 7rem auto;
+    background-color: var(--clr-light-green);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.photo-section, .text-section {
+    flex: 1 1 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.photo-section img {
+    width: 80%;
+    max-width: 300px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.text-section h1 {
+    color: var(--clr-dark-brown);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.text-section p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--clr-dark-brown);
+}
+
+.text-section .btn {
+    background-color: var(--clr-dark-brown);
+    color: var(--clr-light);
+}
+
+.text-section .btn:hover {
+    opacity: .95;
+}
+
+@media (min-width: 768px) {
+    .about-container {
+        flex-wrap: nowrap;
+    }
+
+    .photo-section {
+        flex: 1 1 40%;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .text-section {
+        flex: 1 1 60%;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .text-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .text-section p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .photo-section img {
+        max-width: 350px;
+    }
+
+    .text-section h1 {
+        font-size: 3rem;
+    }
+
+    .text-section p {
+        font-size: 1.3rem;
+    }
+}
+
+
