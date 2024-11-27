@@ -11,37 +11,33 @@
 <body>
 <!--Navigation-->
 <header>
-    <nav class="navbar fixed-top navbar-expand-lg">
+    <nav class="navbar fixed-top navbar-expand-lg" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="offcanvas-text navbar-brand" href="#">
-                <img src="img/bread-icon.svg" alt="baked with gratitude logo" width="30" height="24">
+            <a class="navbar-brand" href="#">
+                <img src="img/bread-icon.svg" alt="baked with gratitude logo" width="30" height="24">Baked with Gratitude
               </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                <div class="offcanvas-text offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Baked with Gratitude</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasRight" aria-label="Close"></button>
-                </div>
-                <ul class="offcanvas-text navbar-nav offcanvas-body">
+            <div class="navbar-collapse collapse justify-content-end in" id="navbarNav">
+                <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link navbar-text" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link navbar-text" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Shop</a>
+                        <a class="nav-link navbar-text" href="https://www.hotplate.com/bakedwithgratitude" target="_blank">Shop</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Classes</a>
+                        <a class="nav-link navbar-text" href="#">Classes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Calendar</a>
+                        <a class="nav-link navbar-text" href="#">Calendar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link navbar-text" href="#">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -49,14 +45,16 @@
     </nav>
 </header>
 
-
 <!--Hero-->
 <section class="hero-section">
     <div class="text-overlay">
         <h1>Baked with Gratitude</h1>
         <p>Experience the joy of creating rustic loaves from scratch</p>
+        <div>
+            <a class="btn" href="https://www.hotplate.com/bakedwithgratitude">Shop</a>
+        </div>
+        
     </div>
-  
 </section>
 
 <!--Footer-->
@@ -98,11 +96,9 @@
             </a>
         </li>
     </ul>
-    <p class="footer-text">&copy 2024 Baked with Gratitude</p>
+    <p class="footer-text">&copy 2024, Baked with Gratitude.</p>
 </footer>
-
-
-<script href="script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
