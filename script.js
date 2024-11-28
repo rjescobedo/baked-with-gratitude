@@ -25,5 +25,39 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+//Contact Form JS
+// Replace the EmailJS user ID and service/template IDs with your credentials
+(function () {
+  emailjs.init("raul.escobedo1012@gmail.com");
+})();
+
+const form = document.getElementById("contact-form");
+const status = document.getElementById("status");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const formData = {
+    name: form.name.value,
+    email: form.email.value,
+    message: form.message.value,
+  };
+
+  emailjs
+    .send("service_dsqwk4h", "template_rv4d86d", formData)
+    .then(
+      function (response) {
+        status.textContent = "Message sent successfully!";
+        status.style.color = "green";
+        form.reset();
+      },
+      function (error) {
+        status.textContent = "Failed to send message. Please try again.";
+        status.style.color = "red";
+      }
+    );
+});
+
+
   
   

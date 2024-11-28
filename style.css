@@ -302,4 +302,127 @@ body {
     }
 }
 
+/* Contact Section */
+  .contact-container {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;/* Full height on small screens */
+    background: var(--clr-light-beige);
+  }
+  
+  .form-container {
+    background: var(--clr-green);
+    padding: 30px;
+    margin: 10rem 0 6rem 0;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    width: 100%; /* Responsive width */
+    max-width: 450px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: var(--clr-dark-brown);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 1rem;
+    text-align: left;
+    font-weight: 600;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    outline: none;
+  }
+  
+  form input:focus,
+  form textarea:focus {
+    border-color: var(--clr-dark-brown);
+    box-shadow: 0 0 5px rgba(67, 40, 24, 0.5);
+  }
+  
+  form textarea {
+    min-height: 120px;
+    resize: none;
+  }
+  
+  form button {
+    width: 100%;
+    padding: 15px;
+    background: var(--clr-dark-brown);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  form button:hover {
+    background: var(--clr-dark-brown-hover);
+    transform: translateY(-2px); /* Subtle hover effect */
+  }
+  
+  form button:active {
+    transform: translateY(1px); /* Active press effect */
+  }
+  
+  #status {
+    margin-top: 15px;
+    font-size: 0.95rem;
+  }
+  
+  #status.success {
+    color: #28a745;
+  }
+  
+  #status.error {
+    color: #dc3545;
+  }
+  
+  /* Media Query for Larger Screens */
+  @media (min-width: 600px) {
+    .form-container {
+      padding: 40px;
+    }
+  
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    form input,
+    form textarea {
+      font-size: 1.1rem;
+      padding: 18px;
+    }
+  
+    form button {
+      font-size: 1.3rem;
+      padding: 18px;
+    }
+  }
+  
+
+  
+
 
