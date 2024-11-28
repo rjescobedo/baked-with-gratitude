@@ -95,7 +95,7 @@ body {
 
 .hero-section .btn {
     margin-top: 2rem;
-    padding: .5rem 1rem;
+    padding: .5rem 2rem;
     color: var(--clr-dark-brown);
     background-color: var(--clr-green);
 }
@@ -137,6 +137,114 @@ body {
     }
 
 }
+
+/* Cards Section */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    min-height: 100vh;
+    position: relative; /* For overlapping */
+    text-align: center;
+}
+
+.card-image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+}
+
+.main-image img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.small-images {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.small-images img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.small-images img:hover {
+    transform: scale(1.1);
+}
+
+.card-info-container {
+    max-width: 500px;
+    background-color: var(--clr-light-green);
+    padding: 1rem;
+    border-radius: 5px;
+    z-index: 2; /* Ensure it layers properly when overlapping */
+}
+
+/* Text Styles */
+.card-info-container h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: var(--clr-dark-brown);
+}
+
+.card-info-container p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--clr-dark-brown-hover);
+    margin-bottom: 20px;
+}
+
+.card-info-container .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--clr-dark-brown);
+    color: var(--clr-light-green);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.card-info-container .btn:hover {
+    background-color: var(--clr-dark-brown-hover);
+}
+
+/* Responsive Behavior */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 769px) {
+    .cards-container {
+        flex-wrap: nowrap; /* Keeps items in one line on larger screens */
+    }
+
+    .card-image-container {
+        position: relative;
+        transform: translate(-10px, 20px); /* Adjust overlapping position */
+        z-index: 1;
+    }
+
+    .card-info-container {
+        margin-left: -60px; /* Creates intentional overlap */
+    }
+}
+
+
+
 
 /* Footer */
 .footer {
