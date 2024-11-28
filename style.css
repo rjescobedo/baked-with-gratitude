@@ -329,7 +329,7 @@ body {
     margin-bottom: 2rem;
   }
   
-  h1 {
+  .form-container h1 {
     margin-bottom: 20px;
     font-size: 2rem;
     color: var(--clr-dark-brown);
@@ -337,8 +337,27 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
   }
+
+  .form-container a {
+    color: var(--clr-dark-brown);
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+
+  .form-container a:hover {
+    color: var(--clr-dark-brown-hover);
+  }
+
+  .form-container li {
+    padding: 0 1rem;
+    margin: 0;
+  }
+
+  .form-container i {
+    font-size: 1.4rem;
+  }
   
-  form label {
+  .form-container form label {
     display: block;
     margin: 10px 0 5px;
     font-size: 1rem;
@@ -346,7 +365,7 @@ body {
     font-weight: 600;
   }
   
-  form input,
+  .form-container form input,
   form textarea {
     width: 100%;
     padding: 15px;
@@ -359,18 +378,18 @@ body {
     outline: none;
   }
   
-  form input:focus,
+  .form-container form input:focus,
   form textarea:focus {
     border-color: var(--clr-dark-brown);
     box-shadow: 0 0 5px rgba(67, 40, 24, 0.5);
   }
   
-  form textarea {
+  .form-container form textarea {
     min-height: 120px;
     resize: none;
   }
   
-  form button {
+  .form-container form button {
     width: 100%;
     padding: 15px;
     background: var(--clr-dark-brown);
@@ -383,12 +402,12 @@ body {
     transition: background 0.3s ease, transform 0.2s ease;
   }
   
-  form button:hover {
+  .form-container form button:hover {
     background: var(--clr-dark-brown-hover);
     transform: translateY(-2px); /* Subtle hover effect */
   }
   
-  form button:active {
+  .form-container form button:active {
     transform: translateY(1px); /* Active press effect */
   }
   
@@ -410,6 +429,14 @@ body {
     .form-container {
         max-width: 700px;
     }
+
+    .form-container a {
+        font-size: 1.5rem;
+    }
+
+    .form-container i {
+        font-size: 2rem;
+      }
     
   }
   
@@ -420,17 +447,17 @@ body {
       max-width: 800px;
     }
   
-    h1 {
+    .form-container h1 {
       font-size: 2.5rem;
     }
   
-    form input,
+    .form-container form input,
     form textarea {
       font-size: 1.1rem;
       padding: 18px;
     }
   
-    form button {
+    .form-container form button {
       font-size: 1.3rem;
       padding: 18px;
     }
