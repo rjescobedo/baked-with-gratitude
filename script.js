@@ -27,36 +27,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //Contact Form JS
 // Replace the EmailJS user ID and service/template IDs with your credentials
+// Initialize EmailJS
 (function () {
+  // Replace 'YOUR_EMAILJS_USER_ID' with your actual EmailJS user ID
   emailjs.init("raul.escobedo1012@gmail.com");
 })();
 
 const form = document.getElementById("contact-form");
 const status = document.getElementById("status");
 
+// Form submission handler
 form.addEventListener("submit", function (event) {
-  event.preventDefault();
+  event.preventDefault(); // Prevent the form from reloading the page
 
+  // Collect form data
   const formData = {
     name: form.name.value,
     email: form.email.value,
     message: form.message.value,
   };
 
+  // Replace these with your EmailJS service ID and template ID
+  const serviceID = "service_dsqwk4h";
+  const templateID = "template_rv4d86d";
+
+  // Send form data using EmailJS
   emailjs
-    .send("service_dsqwk4h", "template_rv4d86d", formData)
+    .send(serviceID, templateID, formData)
     .then(
       function (response) {
+        // On success
         status.textContent = "Message sent successfully!";
-        status.style.color = "green";
-        form.reset();
+        status.className = "success";
+        form.reset(); // Clear the form
       },
       function (error) {
+        // On error
         status.textContent = "Failed to send message. Please try again.";
-        status.style.color = "red";
+        status.className = "error";
       }
     );
 });
+
 
 
   
