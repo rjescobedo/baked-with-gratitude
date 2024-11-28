@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
 </head>
 <body>
 <!--Navigation-->
@@ -47,24 +49,27 @@
 </header>
 
 <!--Contact Section-->
-<section class="contact-container">
-    <div class="form-container">
-      <h1>Contact Me</h1>
-      <form id="contact-form">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
-        
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your Email" required>
-        
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-        
-        <button type="submit">Send</button>
-      </form>
-      <p id="status"></p>
-    </div>
-</section>
+    <section class="contact-container">
+        <div class="form-container">
+            <a class="navbar-brand" href="/index.html">
+                <img src="img/logo.AVIF" alt="baked with gratitude logo" width="200" height="100">
+            </a>
+          <h1>Contact Me</h1>
+          <form id="contact-form" action="https://formspree.io/f/manypkyg" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            
+            <button type="submit">Send</button>
+          </form>
+          <p id="status"></p>
+        </div>
+    </section>
 
 <!--Footer-->
 <footer class="footer">
@@ -76,7 +81,7 @@
             <a class="footer-link" href="/about.html">About</a>
         </li>
         <li class="footer-link">
-            <a class="footer-link" href="https://www.hotplate.com/bakedwithgratitude">Shop</a>
+            <a class="footer-link" href="https://www.hotplate.com/bakedwithgratitude" target="_blank">Shop</a>
         </li>
         <li class="footer-link">
             <a class="footer-link" href="#">Classes</a>
@@ -105,9 +110,8 @@
             </a>
         </li>
     </ul>
-    <p class="footer-text">&copy 2024, Baked with Gratitude.</p>
+    <p class="footer-text">&copy 2024 Baked with Gratitude. All Rigths Reserved</p>
 </footer>
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
 </body>
