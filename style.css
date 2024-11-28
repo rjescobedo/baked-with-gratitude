@@ -33,6 +33,13 @@
 
 html {
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }
 
 /* Header/Navigation */
@@ -57,8 +64,8 @@ html {
 /* Hero Section */
 .hero-section {
     height: 100vh;
+    width: 100vw;
     background: url('img/hero-section-img.webp') center/cover no-repeat;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,21 +73,21 @@ html {
 
 .text-overlay {
     color: var(--clr-light);
-    position: absolute;
     text-align: center;
     /*background: rgba(0, 0, 0, 0.5);*/ /* Semi-transparent background */
     padding: 1.5rem 2rem;
     border-radius: 8px;
+    margin: 3em;
 }
   
 .text-overlay h1 {
-    font-size: 6rem;
+    font-size: 4.5rem;
     margin: 0 0 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
   
 .text-overlay p {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
@@ -94,6 +101,40 @@ html {
 
 .hero-section .btn:hover {
     background-color: var(--clr-green-hover);
+}
+
+@media screen and (min-width: 600px){
+    .hero-section {
+        height: 100vh;
+        width: 100vw;
+        background: url('img/hero-section-img.webp') center/cover no-repeat;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-overlay {
+        color: var(--clr-light);
+        position: absolute;
+        text-align: center;
+        /*background: rgba(0, 0, 0, 0.5);*/ /* Semi-transparent background */
+        padding: 1.5rem 2rem;
+        border-radius: 8px;
+    }
+
+    .text-overlay h1 {
+        font-size: 7rem;
+        margin: 0 0 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+      
+    .text-overlay p {
+        font-size: 2rem;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
 }
 
 /* Footer */
