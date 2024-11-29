@@ -191,9 +191,6 @@ body {
 }
 
 /* Text Styles */
-.cards-container {
-    margin: 3rem;
-}
 .card-info-container h3 {
     font-size: 1.6rem;
     margin-bottom: 10px;
@@ -232,6 +229,7 @@ body {
 @media (min-width: 769px) {
     .cards-container {
         flex-wrap: nowrap; /* Keeps items in one line on larger screens */
+        margin-bottom: 3rem;
     }
 
     .card-image-container {
