@@ -13,6 +13,7 @@
     --fw-bold: 700;
 
     --clr-light-beige: #FEFAE0;
+    --clr-light-beige-hover: #eee3d3;
     --clr-green: #CCD5AE;
     --clr-light-green: #eaeedc;
     --clr-green-hover: #888f71;
@@ -686,6 +687,108 @@ body {
     }
 }
 
+/* Class Section */
+.class-container {
+    background-color: var(--clr-light);
+    padding: 2rem;
+}
+  
+  .class-header {
+    margin: 0;
+    font-size: 2.5rem;
+    color: var(--clr-dark-brown);
+    text-align: center;
+  }
+  
+  .carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-image {
+    min-width: 100%;
+    display: none;
+  }
+  
+  .carousel-image.active {
+    display: block;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .carousel-button.prev {
+    left: 10px;
+  }
+  
+  .carousel-button.next {
+    right: 10px;
+  }
+  
+  .info {
+    max-width: 800px;
+    margin: auto;
+    padding: 1rem;
+    background: var(--clr-green);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info h2, .info h3, .info p {
+    color: var(--clr-dark-brown);
+  }
+
+  .info a {
+    background-color: var(--clr-light-beige);
+    color: var(--clr-dark-brown);
+  }
+
+  .info a:hover {
+    background-color: var(--clr-light-beige-hover);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    .carousel {
+      max-width: 100%;
+    }
+  
+    .info {
+      padding: 1rem 0.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+  
+    .carousel-button {
+      padding: 0.3rem 0.6rem;
+    }
+  }
+  
 
 
 
