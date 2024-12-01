@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const events = [
         {
             title: "Baking Class: Holiday Sourdough",
-            date: "December 10, 2024",
+            date: "December 1, 2024",
             location: "Humble, TX"
         },
         {
