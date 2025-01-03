@@ -3,10 +3,13 @@
 Baked with Gratitude is a beautifully crafted website for a small bakery business, designed to showcase their offerings and connect with their customers. The site emphasizes user-friendly navigation, appealing visuals, and responsive design to ensure an excellent experience across devices.
 
 ## Features
-- **Homepage**: Highlights the bakery’s mission and featured products.
-- **Menu Page**: A detailed menu showcasing baked goods with descriptions and prices.
-- **Order Form**: Allows users to place custom orders easily.
-- **Contact Section**: Provides essential business information and contact options.
+- **Home Page**: Pop up with future front porch pickups, where to shop, and description of the micro-bakery.
+- **About Page**: Description of the baker and how to contact her.
+- **Shop Page**: A hot plate account was already created by the baker. When clicked, it will open the hot plate page.
+- **Classes Page**: Highlights several images and what people will learn from these baking classes.
+- **Shop Page**: A hot plate account was already created by the baker. When clicked, it will open the hot plate page.
+- **Calendar Page**: It highlights several images from past events and updated Google Calendar with current and future events.
+- **Contact Page**: Provides essential business information and contact options.
 - **Responsive Design**: Fully optimized for desktops, tablets, and mobile devices.
 
 ## Tech Stack
