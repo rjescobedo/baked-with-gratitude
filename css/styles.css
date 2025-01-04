@@ -82,7 +82,6 @@ body {
 
 .text-overlay {
     text-align: center;
-    /*background: rgba(0, 0, 0, 0.5);*/ /* Semi-transparent background */
     padding: 1.5rem 2rem;
     border-radius: 8px;
     margin: 2em;
@@ -128,7 +127,6 @@ body {
         color: var(--clr-light);
         position: absolute;
         text-align: center;
-        /*background: rgba(0, 0, 0, 0.5);*/ /* Semi-transparent background */
         padding: 1.5rem 2rem;
         border-radius: 8px;
     }
@@ -156,7 +154,7 @@ body {
     gap: 20px;
     padding: 20px;
     min-height: 100vh;
-    position: relative; /* For overlapping */
+    position: relative;
     text-align: center;
 }
 
@@ -197,7 +195,7 @@ body {
     background-color: var(--clr-light-green);
     padding: 1rem;
     border-radius: 5px;
-    z-index: 2; /* Ensure it layers properly when overlapping */
+    z-index: 2;
 }
 
 /* Text Styles */
@@ -238,18 +236,18 @@ body {
 
 @media (min-width: 769px) {
     .cards-container {
-        flex-wrap: nowrap; /* Keeps items in one line on larger screens */
+        flex-wrap: nowrap; 
         margin-bottom: 3rem;
     }
 
     .card-image-container {
         position: relative;
-        transform: translate(-10px, 20px); /* Adjust overlapping position */
+        transform: translate(-10px, 20px);
         z-index: 1;
     }
 
     .card-info-container {
-        margin-left: -60px; /* Creates intentional overlap */
+        margin-left: -60px;
     }
 }
 
@@ -304,13 +302,13 @@ body {
 
 /* Close Button */
 .close-btn {
-    position: absolute; /* Anchor relative to the parent container */
-    top: 10px; /* Distance from the top of the popup content */
-    right: 15px; /* Distance from the right of the popup content */
+    position: absolute;
+    top: 10px; 
+    right: 15px;
     font-size: 24px;
     color: var(--clr-dark-brown);
     cursor: pointer;
-    z-index: 1001; /* Ensure it's above content but still part of the popup */
+    z-index: 1001; 
 }
 
 .close-btn:hover {
@@ -328,7 +326,6 @@ body {
         transform: scale(1);
     }
 }
-
 
 /* Footer */
 .footer {
@@ -504,7 +501,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;/* Full height on small screens */
+    min-height: 100vh;
     background: var(--clr-light-beige);
   }
   
@@ -599,11 +596,11 @@ body {
   
   .form-container form button:hover {
     background: var(--clr-dark-brown-hover);
-    transform: translateY(-2px); /* Subtle hover effect */
+    transform: translateY(-2px);
   }
   
   .form-container form button:active {
-    transform: translateY(1px); /* Active press effect */
+    transform: translateY(1px);
   }
   
   #status {
@@ -692,9 +689,9 @@ body {
     max-width: 900px;
     margin: 0 auto;
     overflow: hidden;
-    border: 5px solid var(--clr-green-hover); /* Add an orange border */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    border: 5px solid var(--clr-green-hover); 
+    border-radius: 10px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); 
 }
 
 .calendar-wrapper iframe {
@@ -728,8 +725,8 @@ body {
 }
 
 .photo-grid img:hover {
-    transform: scale(1.03) rotate(1deg); /* Slight zoom and rotation */
-    filter: brightness(1.1); /* Slightly brighten the image */
+    transform: scale(1.03) rotate(1deg); 
+    filter: brightness(1.1); 
 }
 
 /* Event Info Section */

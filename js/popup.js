@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Show the popup when the page loads
     setTimeout(() => {
         popup.style.display = "flex";
-    }, 2000); // Delay popup by 2 second
+    }, 2000); 
 
     // Close the popup when clicking the close button
     closePopup.addEventListener("click", () => {

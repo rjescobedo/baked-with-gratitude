@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const eventList = document.getElementById('event-list');
 
-    // Populate events dynamically
+    // Populate events dynamically for the calendar page
     events.forEach(event => {
         const li = document.createElement('li');
         li.innerHTML = `

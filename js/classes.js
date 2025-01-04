@@ -1,7 +1,7 @@
 // Classes Section JS
 let currentSlide = 0;
 const images = document.querySelectorAll('.carousel-image');
-const intervalTime = 3000; // Time in milliseconds
+const intervalTime = 3000; 
 let autoSlideInterval;
 
 function moveSlide(direction) {
