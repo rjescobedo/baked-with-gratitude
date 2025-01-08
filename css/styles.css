@@ -197,6 +197,7 @@ body {
 
 .small-images {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
 }
@@ -213,6 +214,21 @@ body {
 
 .small-images img:hover {
     transform: scale(1.1);
+}
+
+/* Responsive Behavior */
+@media (max-width: 768px) {
+    .small-images img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .small-images img {
+        width: 60px;
+        height: 60px;
+    }
 }
 
 .card-info-container {
@@ -294,7 +310,8 @@ body {
     }
 
     .card-info-container {
-        margin-left: -60px;
+        margin-left: -50px;
+        margin-top: -250px;
     }
 }
 
