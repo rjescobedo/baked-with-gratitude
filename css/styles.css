@@ -32,6 +32,12 @@
     --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25), 0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
 }
 
+.cedarville-cursive-regular {
+    font-family: "Cedarville Cursive", serif;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
 html {
     scroll-behavior: smooth;
     margin: 0;
@@ -83,7 +89,7 @@ body {
 .hero-section {
     height: 100vh;
     width: 100vw;
-    background: url('/images/hero-section-img.webp') center/cover no-repeat;
+    background: url('/images/market-3.avif') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,13 +100,17 @@ body {
     padding: 1.5rem 2rem;
     border-radius: 8px;
     margin: 2em;
+    max-width: 1100px;
+    width: 100%;
 }
   
 .text-overlay h1 {
     color: var(--clr-light);
-    font-size: 3.9rem;
     margin: 0 0 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: "Cedarville Cursive", serif;
+    font-size: 4.5rem;
+    font-weight: 500;
 }
   
 .text-overlay p {
@@ -108,6 +118,9 @@ body {
     font-size: 1.4rem;
     margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    word-wrap: break-word;
+    word-break: break-word;
+
 }
 
 .hero-section .btn {
@@ -125,7 +138,8 @@ body {
     .hero-section {
         height: 100vh;
         width: 100vw;
-        background: url('/images/hero-section-img.webp') center/cover no-repeat;
+        background: url('/images/market-3.avif') center/cover no-repeat;
+        background-position: bottom;
         position: relative;
         display: flex;
         justify-content: center;
@@ -141,7 +155,8 @@ body {
     }
 
     .text-overlay h1 {
-        font-size: 6rem;
+        font-size: 6.5rem;
+        font-weight: 500;
         margin: 0 0 1rem;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
@@ -193,6 +208,7 @@ body {
     object-fit: cover;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .small-images img:hover {
@@ -209,9 +225,11 @@ body {
 
 /* Text Styles */
 .card-info-container h3 {
-    font-size: 1.6rem;
+    font-size: 2rem;
+    font-weight: 600;
     margin-bottom: 10px;
     color: var(--clr-dark-brown);
+    font-family: "Cedarville Cursive", serif;
 }
 
 .card-info-container p {
@@ -234,6 +252,26 @@ body {
 
 .card-info-container .btn:hover {
     background-color: var(--clr-dark-brown-hover);
+}
+
+/* Main Image and Text Overlay */
+.main-image {
+    position: relative;
+}
+
+.main-image .text-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 42%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    max-width: calc(100% - 20px); /* Ensure it doesn't overflow the image */
+    box-sizing: border-box;
+    text-align: center; /* Center the text inside the overlay */
 }
 
 /* Responsive Behavior */
@@ -393,6 +431,10 @@ body {
     text-align: center;
 }
 
+.footer-text a {
+    color: var(--clr-dark-brown);
+}
+
 @media screen and (min-width:600px){
     .footer {
         background-color: var(--clr-light-brown);
@@ -441,8 +483,10 @@ body {
 
 .text-section h1 {
     color: var(--clr-dark-brown);
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 10px;
+    font-family: "Cedarville Cursive", serif;
+    font-weight: 600;
 }
 
 .text-section p {
@@ -455,6 +499,7 @@ body {
     background-color: var(--clr-dark-brown);
     color: var(--clr-light);
     padding: .5rem 1rem;
+    margin-right: 1rem;
 }
 
 .text-section .btn:hover {
@@ -479,7 +524,7 @@ body {
     }
 
     .text-section h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .text-section p {
@@ -496,7 +541,7 @@ body {
     }
 
     .text-section h1 {
-        font-size: 3rem;
+        font-size: 5rem;
     }
 
     .text-section p {
@@ -663,13 +708,25 @@ body {
       padding: 18px;
     }
   }
+
+  .error-message {
+    color: red;
+    font-size: 0.9rem;
+    display: none; /* Hide error messages by default */
+    }
+
+    input:invalid {
+    border: 2px solid red;
+    }
   
   /* Calendar Section */
 .calendar-header h1 {
     text-align: center;
     padding: 20px;
     color: var(--clr-dark-brown);
-    font-size: 3rem;
+    font-size: 4rem;
+    font-weight: 600;
+    font-family: "Cedarville Cursive", serif;
 }
 
 .calendar-container {
@@ -715,7 +772,7 @@ body {
 
 /* Photos Section */
 #photos {
-    margin-bottom: 40px;
+    margin: 0;
 }
 
 .photo-grid {
@@ -761,7 +818,7 @@ body {
 /* Small Devices (Portrait phones, less than 600px) */
 @media (max-width: 600px) {
     .calendar-header h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .calendar-wrapper iframe {
@@ -793,9 +850,10 @@ body {
   
   .class-header {
     margin: 0;
-    font-size: 2.5rem;
+    font-family: "Cedarville Cursive", serif;
     color: var(--clr-dark-brown);
     text-align: center;
+    font-size: 1rem;
   }
   
   .carousel {
@@ -870,9 +928,24 @@ body {
   }
   
   /* Responsive design */
+  @media (max-width: 500px) {
+    .info {
+        padding: 1.2rem;
+    }
+    .class-header h1 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+  
+    .carousel-button {
+      padding: 0.3rem 0.6rem;
+    }
+  }
+
   @media (max-width: 768px) {
     .class-header h1 {
-      font-size: 2.1rem;
+      font-size: 3rem;
+      font-weight: 600;
     }
   
     .carousel {
@@ -884,23 +957,11 @@ body {
     }
   }
   
-  @media (max-width: 480px) {
 
-    .info {
-        padding: 1.2rem;
-    }
+  @media screen and (min-width: 769px) {
     .class-header h1 {
-      font-size: 1.7rem;
-    }
-  
-    .carousel-button {
-      padding: 0.3rem 0.6rem;
-    }
-  }
-
-  @media screen and (min-width: 800px) {
-    .class-header h1 {
-        font-size: 3rem;
+        font-size: 4rem;
+        font-weight: 600;
     }
     
   }
