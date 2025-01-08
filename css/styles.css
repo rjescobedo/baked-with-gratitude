@@ -70,6 +70,15 @@ body {
     height: 50px;
 }
 
+.navbar-toggler-icon {
+    background-image: url('/images/burger-icon.svg');
+}
+
+.navbar-toggler, .navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler-icon {
+    outline: none;
+    box-shadow: none;
+}
+
 /* Hero Section */
 .hero-section {
     height: 100vh;
