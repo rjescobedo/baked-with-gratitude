@@ -87,8 +87,8 @@ body {
 /* Custom Hamburger */
 
 .hamburger .line{
-    width: 35px;
-    height: 3px;
+    width: 30px;
+    height: 2px;
     background-color: var(--clr-dark-brown);
     display: block;
     margin: 8px auto;
@@ -124,7 +124,7 @@ body {
     -webkit-transform: translateY(-13px) rotate(-45deg);
     -ms-transform: translateY(-13px) rotate(-45deg);
     -o-transform: translateY(-13px) rotate(-45deg);
-    transform: translateY(-12px) rotate(-45deg);
+    transform: translateY(-10px) rotate(-45deg);
   }
   
 
