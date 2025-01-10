@@ -48,11 +48,12 @@ body {
     background-color: var(--clr-light-brown);
 }
 .navbar-brand:hover {
-    opacity: .8;
+    opacity: .75;
 }
 
 .navbar-text {
     color: var(--clr-dark-brown);
+    opacity: .6;
     font-size: 1.15rem;
     text-align: center;
 }
@@ -62,16 +63,20 @@ body {
 }
 
 .navbar-text:hover {
-    opacity: .8;
+    opacity: 1;
 }
 
 .navbar-brand img {
-    width: 100px;
-    height: 50px;
+    width: 80px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
 }
 
 .navbar-toggler-icon {
     background-image: url('/images/burger-icon.svg');
+    margin: 0;
+    padding: 0;
 }
 
 .navbar-toggler, .navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler-icon {
@@ -83,7 +88,7 @@ body {
 .hero-section {
     height: 100vh;
     width: 100vw;
-    background: url('/images/market-3.avif') center/cover no-repeat;
+    background: url('/images/homemade-bread-baking-rustic-kitchen-fresh-delicious-generated-by-artificial-intelligence.jpg') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,7 +99,6 @@ body {
     padding: 1.5rem 2rem;
     border-radius: 8px;
     margin: 2em;
-    max-width: 1100px;
     width: 100%;
 }
   
@@ -103,8 +107,14 @@ body {
     margin: 0 0 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     font-family: "Dancing Script", serif;
-    font-size: 4.5rem;
+    font-size: 5rem;
     font-weight: 500;
+}
+
+.word-wrap-container {
+    display: inline-block;
+    max-width: 650px;
+     word-wrap: break-word;
 }
   
 .text-overlay p {
@@ -112,9 +122,6 @@ body {
     font-size: 1.2rem;
     margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    word-wrap: break-word;
-    word-break: break-word;
-
 }
 
 .hero-section .btn {
@@ -132,7 +139,7 @@ body {
     .hero-section {
         height: 100vh;
         width: 100vw;
-        background: url('/images/market-3.avif') center/cover no-repeat;
+        background: url('/images/homemade-bread-baking-rustic-kitchen-fresh-delicious-generated-by-artificial-intelligence.jpg') center/cover no-repeat;
         background-position: bottom;
         position: relative;
         display: flex;
@@ -149,7 +156,7 @@ body {
     }
 
     .text-overlay h1 {
-        font-size: 6.5rem;
+        font-size: 7rem;
         font-weight: 500;
         margin: 0 0 1rem;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -410,7 +417,7 @@ body {
 }
 
 .footer-link:hover {
-    opacity: .8;
+    opacity: .7;
 }
 
 .social-list {
