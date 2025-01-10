@@ -19,6 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 
+  // Functionality for custom hamburger
+  $(document).ready(function(){
+    $(".hamburger").click(function(){
+      $(this).toggleClass("is-active");
+    });
+  });
+
   // Add click event listener to the body
   body.addEventListener('click', (e) => {
       // Ensure the click is outside the navbar-toggler and navbar itself
