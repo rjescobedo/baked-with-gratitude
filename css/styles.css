@@ -136,6 +136,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards; /* Fade-in animation for the background */
 }
 
 .text-overlay {
@@ -958,8 +960,7 @@ body {
   
   .carousel {
     position: relative;
-    max-width: 700px;
-    max-height: 700px;
+    max-width: 90%;
     overflow: hidden;
     margin: 2rem auto;
     border-radius: 8px;
@@ -971,13 +972,19 @@ body {
   }
   
   .carousel-image {
-    min-width: 100%;
-    display: none;
-  }
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Fade-in and fade-out transition */
+    visibility: hidden;
+}
   
   .carousel-image.active {
-    display: block;
-  }
+    opacity: 1;
+    visibility: visible;
+}
   
   .carousel-button {
     position: absolute;
@@ -997,6 +1004,25 @@ body {
   
   .carousel-button.next {
     right: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .carousel {
+      max-width: 100%; /* Carousel takes up full width on smaller screens */
+    }
+    .carousel-container {
+      width: 100%;
+    }
+  }
+  
+  /* For larger screens */
+  @media (min-width: 769px) {
+    .carousel {
+      max-width: 50%; /* Reduce the width of the carousel on larger screens */
+    }
+    .carousel-container {
+      width: 100%;
+    }
   }
   
   .info {
