@@ -142,7 +142,6 @@ body {
     text-align: center;
     padding: 1.5rem 2rem;
     border-radius: 8px;
-    margin: 2em;
     width: 100%;
 }
   
@@ -228,11 +227,20 @@ body {
 }
 
 .card-image-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 10px;
     max-width: 400px;
 }
+
+.main-image {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Set a maximum width */
+    margin-bottom: 1rem;
+}
+
 
 .main-image img {
     width: 100%;
@@ -248,8 +256,8 @@ body {
 }
 
 .small-images img {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     border-radius: 5px;
     object-fit: cover;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -259,6 +267,10 @@ body {
 
 .small-images img:hover {
     transform: scale(1.1);
+}
+
+#main-image {
+    transition: opacity .3s ease-in-out;
 }
 
 /* Responsive Behavior */
@@ -277,6 +289,8 @@ body {
 }
 
 .card-info-container {
+    flex: 1 1 100%;
+    text-align: center;
     max-width: 500px;
     background-color: var(--clr-light-green);
     padding: 1rem;
@@ -317,23 +331,40 @@ body {
 
 /* Main Image and Text Overlay */
 .main-image {
-    position: relative;
+    position: relative; /* Ensure the text overlay is positioned relative to this container */
 }
 
 .main-image .text-overlay {
     position: absolute;
-    bottom: 10px;
-    left: 42%;
-    transform: translateX(-50%);
+    bottom: 0; /* Position near the bottom */
+    left: 0; /* Start at the left edge */
+    width: 100%; /* Span the full width of the image */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     color: white;
     text-shadow: 0 0 2px black;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 1rem;
-    max-width: calc(100% - 20px); /* Ensure it doesn't overflow the image */
-    box-sizing: border-box;
+    padding: 1rem; /* Vertical padding */
+    font-size: 1rem; /* Default font size */
+    font-weight: bold;
+    box-sizing: border-box; /* Include padding in the width calculation */
     text-align: center; /* Center the text inside the overlay */
+    z-index: 2; /* Ensure it sits on top of the image */
+    word-wrap: break-word; /* Prevent long words from breaking layout */
+    border-radius: 0 0 10px 10px;
+}
+
+@media (max-width: 768px) {
+    .main-image .text-overlay {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+        padding: 8px 0; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-image .text-overlay {
+        font-size: 0.8rem; /* Further reduce font size */
+        bottom: 5px; /* Bring overlay closer to the edge */
+        padding: 6px 0; /* Reduce vertical padding */
+    }
 }
 
 /* Responsive Behavior */
@@ -347,6 +378,7 @@ body {
     .cards-container {
         flex-wrap: nowrap; 
         margin-bottom: 3rem;
+        padding: 1rem;
     }
 
     .card-image-container {
@@ -600,9 +632,12 @@ body {
         margin: 5rem auto;
     }
     .photo-section img {
-        max-width: 350px;
+        max-width: 300px;
     }
+    .text-section {
+       height: 100vh;
 
+    }
     .text-section h1 {
         font-size: 5rem;
     }
@@ -610,6 +645,7 @@ body {
     .text-section p {
         font-size: 1.3rem;
     }
+
 }
 
 /* Contact Section */
@@ -984,7 +1020,11 @@ body {
   }
 
   .info {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .info li {
+    color: var(--clr-dark-brown);
   }
 
   .info a {
