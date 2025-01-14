@@ -4,15 +4,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const popupButton = document.getElementById("popupBtn");
     const pickupDate = document.getElementById("pickup-date");
 
+    // Function to check if 12 hours have passed since the last popup
+    function shouldShowPopup() {
+        const lastPopupTime = localStorage.getItem("lastPopupTime");
+        const currentTime = new Date().getTime();
 
-// Show the popup only once per visit
-    const popupShown = localStorage.getItem("popupShown");
+        // If it's been more than 12 hours (12 * 60 * 60 * 1000 = 43200000 milliseconds)
+        if (!lastPopupTime || currentTime - lastPopupTime > 43200000) {
+            return true;
+        }
+        return false;
+    }
 
-    if (!popupShown) {
+    // Show the popup only if it's been more than 12 hours
+    if (shouldShowPopup()) {
         setTimeout(() => {
             popup.style.display = "flex";
-            localStorage.setItem("popupShown", "true");
-        }, 2000); 
+            // Save the current time as the last popup time
+            localStorage.setItem("lastPopupTime", new Date().getTime());
+        }, 2000); // Popup appears after 2000ms (2 seconds)
     }
 
     // Close the popup when clicking the close button
@@ -36,12 +46,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const today = new Date();
     const currentDayOfWeek = today.getDay();
     const daysUntilThursday = currentDayOfWeek === 4 ? 7 : (4 - currentDayOfWeek + 7) % 7;
-    const nextThursday= new Date(today);
+    const nextThursday = new Date(today);
     nextThursday.setDate(today.getDate() + daysUntilThursday);
-    
+
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     const nextThursdayFormatted = nextThursday.toLocaleDateString('en-US', options);
-    
-    pickupDate.innerHTML += `<br>${nextThursdayFormatted}!`;
 
+    pickupDate.innerHTML += `<br>${nextThursdayFormatted}!`;
 });
