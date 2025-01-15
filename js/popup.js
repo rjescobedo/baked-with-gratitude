@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
             popup.style.display = "flex";
             // Save the current time as the last popup time
             localStorage.setItem("lastPopupTime", new Date().getTime());
-        }, 2000); // Popup appears after 2000ms (2 seconds)
+        }, 3000); // Popup appears after 3000ms (3 seconds)
     }
 
     // Close the popup when clicking the close button
