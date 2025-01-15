@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const lastPopupTime = localStorage.getItem("lastPopupTime");
         const currentTime = new Date().getTime();
 
-        // If it's been more than 12 hours (12 * 60 * 60 * 1000 = 43200000 milliseconds)
-        if (!lastPopupTime || currentTime - lastPopupTime > 43200000) {
+        // If it's been more than 30 minutes
+        if (!lastPopupTime || currentTime - lastPopupTime > 1800000) {
             return true;
         }
         return false;
