@@ -53,7 +53,6 @@ body {
 
 .navbar-text {
     color: var(--clr-dark-brown);
-    opacity: .6;
     font-size: 1.15rem;
     text-align: center;
 }
@@ -63,7 +62,7 @@ body {
 }
 
 .navbar-text:hover {
-    opacity: 1;
+    opacity: .6;
 }
 
 .navbar-brand img {
@@ -103,6 +102,13 @@ body {
 }
 
 @media (min-width: 992px) {
+    .navbar-text {
+        opacity: .6;
+    }
+
+    .navbar-text:hover {
+        opacity: 1;
+    }
     .hamburger .line {
         display: none;
     }
@@ -435,11 +441,22 @@ body {
 
 .popup-content h2 {
     color: var(--clr-dark-brown);
-    margin-bottom: 10px;
+    font-family: "Dancing Script", serif;
+    margin: .5rem;
+    font-size: 2rem;
+}
+
+.pickup-date {
+    margin: .5rem;
 }
 
 .popup-content p {
     color: var(--clr-dark-brown);
+    font-size: 1rem;
+}
+
+#popup-text {
+    margin: 0 0 1.5rem 0;
 }
 
 .popup-content .popup-button {
@@ -780,7 +797,7 @@ body {
   }
   
   #status.success {
-    color: #28a745;
+    color: var(--clr-dark-brown);
   }
   
   #status.error {

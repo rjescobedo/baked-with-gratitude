@@ -33,6 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
           closeNavbar();
       }
   });
+
+  // Update Copyright year dynamically
+  const currentYear = new Date().getFullYear();
+
+  document.getElementById('copyright-year').textContent = currentYear;
 });
 
 

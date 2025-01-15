@@ -15,11 +15,11 @@ form.addEventListener("submit", async function (event) {
         });
 
         if (response.ok) {
-            status.textContent = "Message sent successfully!";
+            status.textContent = "🎉 Thank you for reaching out! Your message has been sent successfully. We’ll get back to you as soon as possible. ";
             status.className = "success";
             form.reset();
         } else {
-            status.textContent = "Failed to send message. Please try again.";
+            status.textContent = "Oops! Something went wrong, and we couldn’t send your message. Please try again, or contact us directly at bakedwithgratitude@gmai.com. We’re here to help!";
             status.className = "error";
         }
     } catch (error) {
