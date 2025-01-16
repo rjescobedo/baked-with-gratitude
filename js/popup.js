@@ -57,13 +57,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Update the pickup date to every Thursday until the end of the year
     const today = new Date();
+    console.log(today)
     const currentDayOfWeek = today.getDay();
+    console.log(currentDayOfWeek)
     const daysUntilThursday = currentDayOfWeek === 4 ? 7 : (4 - currentDayOfWeek + 7) % 7;
+    console.log(daysUntilThursday)
     const nextThursday = new Date(today);
-    nextThursday.setDate(today.getDate() + daysUntilThursday);
+    console.log(nextThursday)
+    nextThursday.setDate(today.getDate() + daysUntilThursday); 
 
+    
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     const nextThursdayFormatted = nextThursday.toLocaleDateString('en-US', options);
+    
+    // if statement: if Thursday, say "Today", else format date to next Thursday
+    if (currentDayOfWeek === 4) {
+        pickupDate.innerHTML += `<br> Today!`
+    } else {
+        pickupDate.innerHTML += `<br>${nextThursdayFormatted}!`;
+    }
 
-    pickupDate.innerHTML += `<br>${nextThursdayFormatted}!`;
 });
