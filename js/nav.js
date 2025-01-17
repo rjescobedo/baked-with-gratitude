@@ -26,20 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Add click event listener to the body
-  body.addEventListener('click', (e) => {
-      // Ensure the click is outside the navbar-toggler and navbar itself
-      if (!e.target.closest('.navbar') && navbarNav.classList.contains('show')) {
-          closeNavbar();
-      }
-  });
-
   // Update Copyright year dynamically
   const currentYear = new Date().getFullYear();
 
   document.getElementById('copyright-year').textContent = currentYear;
 });
-
 
   
   

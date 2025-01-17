@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the story behind Baked with Gratitude! Learn about our mission, Enid's passion for baking, and how we craft unique, heartfelt creations for every occasion.">
     <title>Baked with Gratitude: About</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -22,7 +23,7 @@
         <a class="navbar-brand" href="./index.html">
             <img src="./images/logo.AVIF" alt="baked with gratitude logo" width="100" height="50" loading="lazy">
         </a>
-        <div class="hamburger" id="hamburger-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <div class="hamburger" id="hamburger-1" role="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-controls="menu">
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
@@ -30,22 +31,22 @@
         <div class="navbar-collapse collapse justify-content-end in" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link navbar-text" aria-current="page" href="./index.html">Home</a>
+                    <a class="nav-link navbar-text" aria-current="page" href="./index.html" aria-label="Vist our Home Page">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link navbar-text" aria-current="page" href="./about.html">About</a>
+                    <a class="nav-link navbar-text" aria-current="page" href="./about.html" aria-label="Visit our About Page">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link navbar-text" href="https://www.hotplate.com/bakedwithgratitude" target="_blank">Shop</a>
+                    <a class="nav-link navbar-text" href="https://www.hotplate.com/bakedwithgratitude" target="_blank" aria-label="Shop in Hot Plate">Shop</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link navbar-text" href="./classes.html">Classes</a>
+                    <a class="nav-link navbar-text" href="./classes.html" aria-label="Visit our Classes Page">Classes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link navbar-text" href="./calendar.html">Calendar</a>
+                    <a class="nav-link navbar-text" href="./calendar.html" aria-label="Visit our Calendar Page">Calendar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link navbar-text" href="./contact.html">Contact</a>
+                    <a class="nav-link navbar-text" href="./contact.html" aria-label="Visit our Contact Page">Contact</a>
                 </li>
             </ul>
         </div>
@@ -55,9 +56,9 @@
 <!--About Section-->
 <div class="about-container">
     <div class="photo-section">
-        <img src="./images/enid-2.avif" alt="Enid Escobedo" class="profile-photo" loading="lazy">
-        <img src="./images/breads-kitchen.avif" alt="Sourdough Breads in kitchen" class="bread-photo" loading="lazy">
-        <img src="./images/market-4.avif" alt="Fresh sourdough bread" class="bread-photo" loading="lazy">
+        <img src="./images/enid-2.avif" alt="Profile Picture of Enid Paradowski" class="profile-photo" loading="lazy">
+        <img src="./images/breads-kitchen.avif" alt="Multiple sourdough breads in the kitchen" class="bread-photo" loading="lazy">
+        <img src="./images/market-4.avif" alt="Delicious fresh sourdough bread" class="bread-photo" loading="lazy">
     </div>
     <div class="text-section">
         <h1>About the Baker</h1>
@@ -79,8 +80,8 @@
             Thanks for stopping by! I hope my little corner of the world inspires you to explore your passions, try something new, or just slow down and enjoy the simple things. Here’s to spreading some warmth and love, one loaf at a time, right here in Houston!
         </p>
         <div>
-            <a class="btn" href="./contact.html">Contact Me</a>
-            <a class="btn" href="./calendar.html">Where to Find Me!</a>
+            <a class="btn" href="./contact.html" aria-label="Visit the Contact Page to contact Enid">Contact Me</a>
+            <a class="btn" href="./calendar.html" aria-label="Find where Enid is at by visiting her calendar page">Where to Find Me!</a>
         </div>
     </div>
 </div>
@@ -88,46 +89,46 @@
 <footer class="footer">
     <ul class="footer-link-container">
         <li class="footer-link">
-            <a class="footer-link" href="./index.html">Home</a>
+            <a class="footer-link" href="./index.html" aria-label="Visit our Home Page">Home</a>
         </li>
         <li class="footer-link">
-            <a class="footer-link" href="./about.html">About</a>
+            <a class="footer-link" href="./about.html" aria-label="Visit our About Page">About</a>
         </li>
         <li class="footer-link">
-            <a class="footer-link" href="https://www.hotplate.com/bakedwithgratitude" target="_blank">Shop</a>
+            <a class="footer-link" href="https://www.hotplate.com/bakedwithgratitude" target="_blank" aria-label="Shop at Hot Plate to purchase sourdough bread">Shop</a>
         </li>
         <li class="footer-link">
-            <a class="footer-link" href="./classes.html">Classes</a>
+            <a class="footer-link" href="./classes.html" aria-label="Visit our Classes Page">Classes</a>
         </li>
         <li class="footer-link">
-            <a class="footer-link" href="./calendar.html">Calendar</a>
+            <a class="footer-link" href="./calendar.html" aria-label="Visit our Calendar Page">Calendar</a>
         </li>
         <li class="footer-link">
-            <a class="footer-link" href="./contact.html">Contact</a>
+            <a class="footer-link" href="./contact.html" aria-label="Visit our Contact Page">Contact</a>
         </li>
     </ul>
     <ul class="social-list">
         <li class="social-list-item">
-            <a class="social-list-link" href="https://www.instagram.com/bakedwithgratitude/" target="_blank">
+            <a class="social-list-link" href="https://www.instagram.com/bakedwithgratitude/" target="_blank" aria-label="Instagram">
                 <i class="social-list-icon bi bi-instagram"></i>
             </a>
         </li>
         <li class="social-list-item">
-            <a class="social-list-link" href="https://www.facebook.com/people/Baked-with-Gratitude/61555733050419/?mibextid=LQQJ4d" target="_blank">
+            <a class="social-list-link" href="https://www.facebook.com/people/Baked-with-Gratitude/61555733050419/?mibextid=LQQJ4d" target="_blank" aria-label="Facebook">
                 <i class="social-list-icon bi-facebook"></i>
             </a>
         </li>
         <li class="social-list-item">
-            <a class="social-list-link" href="https://www.tiktok.com/@bakedwithgratitude" target="_blank">
+            <a class="social-list-link" href="https://www.tiktok.com/@bakedwithgratitude" target="_blank" aria-label="TikTok">
                 <i class="social-list-icon bi-tiktok"></i>
             </a>
         </li>
     </ul>
     <p class="footer-text">&copy <span id="copyright-year"></span> Baked with Gratitude. All Rights Reserved</p>
-    <p class="footer-text">Made with 🤎 by <a href="https://raulescobedo-portfolio.netlify.app/" target="_blank">Raul</a></p>
+    <p class="footer-text">Made with 🤎 by <a href="https://raulescobedo-portfolio.netlify.app/" target="_blank" aria-label="Visit Raul's Portfolio">Raul</a></p>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="./js/nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+<script src="./js/nav.js" defer></script>
 </body>
 </html>
