@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const navbarNav = document.getElementById('navbarNav');
   const navbarCollapse = new bootstrap.Collapse(navbarNav, { toggle: false });
   const navItems = document.querySelectorAll('.nav-item');
-  const body = document.body;
 
   // Function to close the navbar
   const closeNavbar = () => {
