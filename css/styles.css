@@ -170,6 +170,7 @@ body {
     font-family: "Dancing Script", serif;
     font-size: 5rem;
     font-weight: 500;
+    line-height: 6rem;
 }
 
 .word-wrap-container {
@@ -505,7 +506,7 @@ body {
     flex-direction: column;
     background-color: var(--clr-light-brown);
     color: var(--clr-dark);
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 .footer-link-container {
